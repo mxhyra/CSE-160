@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Point</title>
+  </head>
+
+  <body onload="main()">
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports canvas
+  </canvas>
+  <p id="performance"></p>
+  <p>Global Rotation</p>
+  <input type="range" min="0" max="360" value="0" id="angleSlide">
+
+  <p>Leg Joint</p>
+  <input type="range" min="-45" max="45" value="0" id="legSlide">
+
+  <p>Knee Joint</p>
+  <input type="range" min="-25" max="5" value="0" id="kneeSlide">
+
+  <p>Tail Joint</p>
+  <input type="range" min="-30" max="30" value="0" id="tailSlide">
+
+  <br><br>
+
+  <button id="animationOnButton">Animation ON</button>
+  <button id="animationOffButton">Animation OFF</button>
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+  <script src="Cone.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Cube.js"></script>
+  <script src="BlockyAnimal.js"></script>
+</body>
+</html>

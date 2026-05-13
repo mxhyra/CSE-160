@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Blocky World</title>
+</head>
+
+<body onload="main()">
+
+  <div id="story" style="position:absolute; left:10px; top:10px; color:white; font-family:Arial; font-size:16px; background:rgba(0,0,0,0.5); padding:10px;">
+    <b>Horse Rescue Mission</b><br>
+    Goal: Find the lost horse and build a safe stable around it.<br>
+    W/A/S/D: Move<br>
+    Q/E or Mouse Drag: Turn<br>
+    F: Add block<br>
+    G: Delete block
+  </div>
+
+  <div id="fps"
+  style="position:absolute;
+  right:10px;
+  top:10px;
+  color:white;
+  background:black;
+  padding:8px;
+  font-family:Arial;">
+    FPS
+  </div>
+
+  <canvas id="webgl" width="800" height="800">
+    Please use a browser that supports canvas
+  </canvas>
+
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Camera.js"></script>
+  <script src="BlockyWorld.js"></script>
+
+</body>
+</html>

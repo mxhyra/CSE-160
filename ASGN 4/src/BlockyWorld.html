@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Blocky World</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: white;
+    }
+
+    #story {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      color: white;
+      font-family: Arial;
+      font-size: 16px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+    }
+
+    #fps {
+      position: absolute;
+      left: 920px;
+      top: 30px;
+      color: white;
+      background: black;
+      padding: 8px;
+      font-family: Arial;
+    }
+
+    #controls {
+      position: absolute;
+      top: 110px;
+      left: 920px;
+      color: black;
+      background: white;
+      padding: 12px;
+      font-family: Arial;
+      border-radius: 6px;
+    }
+
+    button {
+      margin: 3px;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+
+  <div id="story">
+    W/A/S/D: Move<br>
+    Q/E or Mouse Drag: Turn
+  </div>
+
+  <div id="fps">FPS</div>
+
+  <div id="controls">
+    Light X
+    <input type="range" min="-250" max="250" value="0" id="lightSlideX">
+
+    <br><br>
+
+    Light Y
+    <input type="range" min="-250" max="250" value="100" id="lightSlideY">
+
+    <br><br>
+
+    Light Z
+    <input type="range" min="-250" max="250" value="-200" id="lightSlideZ">
+
+    <br><br>
+
+    Red
+    <input type="range" min="0" max="100" value="100" id="lightRed">
+
+    Green
+    <input type="range" min="0" max="100" value="100" id="lightGreen">
+
+    Blue
+    <input type="range" min="0" max="100" value="100" id="lightBlue">
+
+    <br><br>
+
+    <button id="lightOn">Light ON</button>
+    <button id="lightOff">Light OFF</button>
+
+    <br>
+
+    <button id="normalOn">Normal ON</button>
+    <button id="normalOff">Normal OFF</button>
+
+    <br>
+
+    <button id="spotlightOn">Spotlight ON</button>
+    <button id="spotlightOff">Spotlight OFF</button>
+  </div>
+
+  <canvas id="webgl" width="800" height="800">
+    Please use a browser that supports canvas.
+  </canvas>
+
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Sphere.js"></script>
+  <script src="Camera.js"></script>
+  <script src="OBJParser.js"></script>
+  <script src="BlockyWorld.js"></script>
+
+</body>
+</html>
